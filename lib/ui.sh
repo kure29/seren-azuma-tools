@@ -6,22 +6,22 @@
 # 打印带颜色的信息
 print_info() {
     echo -e "${BLUE}[信息]${NC} $1"
-    log_message "INFO: $1"
+    [[ -n "${LOG_FILE:-}" ]] && log_message "INFO: $1" 2>/dev/null || true
 }
 
 print_success() {
     echo -e "${GREEN}[成功]${NC} $1"
-    log_message "SUCCESS: $1"
+    [[ -n "${LOG_FILE:-}" ]] && log_message "SUCCESS: $1" 2>/dev/null || true
 }
 
 print_warning() {
     echo -e "${YELLOW}[警告]${NC} $1"
-    log_message "WARNING: $1"
+    [[ -n "${LOG_FILE:-}" ]] && log_message "WARNING: $1" 2>/dev/null || true
 }
 
 print_error() {
     echo -e "${RED}[错误]${NC} $1"
-    log_message "ERROR: $1"
+    [[ -n "${LOG_FILE:-}" ]] && log_message "ERROR: $1" 2>/dev/null || true
 }
 
 print_header() {
