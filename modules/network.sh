@@ -1,4 +1,3 @@
-local test_hosts=("8.8.8.8" "1.1.1.1" "114.114.114.114" "baidu.com" "google.com")
     
     print_info "测试网络连通性..."
     for host in "${test_hosts[@]}"; do
