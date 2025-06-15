@@ -78,13 +78,13 @@ linux_tools/
 
 ```bash
 # 方法1: 直接下载
-wget -O linux_tools.tar.gz https://github.com/your-repo/linux_tools/archive/main.tar.gz
-tar -xzf linux_tools.tar.gz
-cd linux_tools
+wget -O linux_tools.tar.gz https://github.com/kure29/seren-azuma-tools/archive/refs/heads/main.zip
+tar -xzf main.zip
+cd seren-azuma-tools
 
 # 方法2: Git克隆
-git clone https://github.com/your-repo/linux_tools.git
-cd linux_tools
+git clone https://github.com/kure29/seren-azuma-tools.git
+cd seren-azuma-tools
 ```
 
 ### 2. 设置权限
@@ -200,9 +200,9 @@ MIT License - 详见 [LICENSE](LICENSE) 文件
 
 ## 🙋‍♂️ 支持
 
-- **Issues**: [GitHub Issues](https://github.com/your-repo/linux_tools/issues)
-- **讨论**: [GitHub Discussions](https://github.com/your-repo/linux_tools/discussions)
-- **文档**: [项目Wiki](https://github.com/your-repo/linux_tools/wiki)
+- **Issues**: [GitHub Issues](https://github.com/kure29/seren-azuma-tools/issues)
+- **讨论**: [GitHub Discussions](https://github.com/kure29/seren-azuma-tools/discussions)
+- **文档**: [项目Wiki](https://github.com/kure29/seren-azuma-tools/wiki)
 
 ## 📚 更新日志
 
@@ -227,4 +227,4 @@ MIT License - 详见 [LICENSE](LICENSE) 文件
 
 **作者**: 東雪蓮 (Seren Azuma)  
 **版本**: 3.0  
-**更新**: 2024年
+**更新**: 2025年
