@@ -5,15 +5,21 @@
 
 # 日志初始化
 init_logging() {
+    if [[ -z "$LOG_FILE" ]]; then
+        LOG_FILE="$SCRIPT_DIR/system_manager.log"
+    fi
+    
     touch "$LOG_FILE" 2>/dev/null || {
         LOG_FILE="/tmp/system_manager.log"
-        touch "$LOG_FILE"
+        touch "$LOG_FILE" 2>/dev/null || LOG_FILE="/dev/null"
     }
 }
 
 # 日志记录函数
 log_message() {
-    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> "$LOG_FILE"
+    if [[ -n "$LOG_FILE" && "$LOG_FILE" != "/dev/null" ]]; then
+        echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> "$LOG_FILE" 2>/dev/null || true
+    fi
 }
 
 # 检查是否为root用户
